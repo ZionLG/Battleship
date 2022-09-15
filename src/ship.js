@@ -1,10 +1,11 @@
 const Ship = (length) => {
   let sunk = false;
-  let hitBox = [];
+  let hitBox = new Array(length).fill(0);
 
   const hit = (number) => {
-    hitBox.push(number);
+    hitBox[number] = 1;
   };
+
   const isSunk = () => {
     if (hitBox.length === length) {
       sunk = true;
