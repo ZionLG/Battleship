@@ -5,11 +5,13 @@ const Ship = (length) => {
   const hit = (number) => {
     hitBox[number] = 1;
   };
-
   const isSunk = () => {
-    if (hitBox.length === length) {
-      sunk = true;
-    }
+    const result = hitBox.every((element) => {
+      if (element === 1) {
+        sunk = true;
+      }
+    });
+
     return sunk;
   };
 
