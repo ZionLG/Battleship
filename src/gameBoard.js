@@ -42,7 +42,6 @@ const GameBoard = () => {
     const [row, column] = cord;
     if (Array.isArray(_board[row][column])) {
       _board[row][column][0].hit(_board[row][column][1]);
-      console.log(_board[row][column][0].hitBox);
       if (_checkLostGame()) {
         _allSunk = true;
       }
